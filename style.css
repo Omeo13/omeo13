@@ -1,0 +1,7 @@
+html {
+  font-size: 18px; /* px means "pixels": the base font size is now 10 pixels high */
+  font-family: "Dancing Script", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+} /* this is the ouput from google fonts */
