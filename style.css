@@ -1,7 +1,239 @@
-html {
-  font-size: 18px; /* px means "pixels": the base font size is now 10 pixels high */
-  font-family: "Dancing Script", serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
-} /* this is the ouput from google fonts */
+/* Reset some default browser styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Set a default font and background color */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #0c300b;
+  color: #333;
+  background-size: cover;
+  background-position: center;
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  filter: blur(0px);
+  z-index: -1;
+}
+
+/* Add some basic styling for headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-bottom: 1rem;
+}
+
+/* Add some basic styling for paragraphs */
+p {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+/* Use Dancing Script font for specific elements */
+h1,
+h2 {
+  font-family: "Dancing Script", cursive;
+}
+
+/* Banner styling */
+.banner {
+  position: relative;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.banner::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("images/banner.jpg");
+  background-size: cover;
+  background-position: center;
+  filter: blur(3px);
+  z-index: -1;
+}
+
+.banner h1 {
+  color: black;
+  font-size: 64px;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+/* Carousel styling */
+.carousel {
+  position: absolute;
+  top: 150px; /* Adjust this value to position the carousel under the banner */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%; /* Adjust the width as needed */
+  height: 400px; /* Adjust the height as needed */
+  overflow: hidden;
+  z-index: 0;
+}
+
+.carousel-inner {
+  display: flex;
+  transition: transform 1s ease;
+}
+
+.carousel-item {
+  min-width: 100%;
+  transition: transform 1s ease;
+  position: relative;
+}
+
+.carousel-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensure the image covers the entire carousel item */
+}
+
+.carousel-caption {
+  position: absolute;
+  top: 25%;
+  left: 48%;
+  transform: translate(-50%, -50%); /* Corrected transform property */
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 1.8rem;
+  font-family: "Dancing Script", cursive;
+  max-width: 80%;
+  z-index: 10;
+}
+
+/* Ensure links are visible and clickable */
+.carousel-caption a {
+  color: rgb(53, 231, 29);
+  text-decoration: none;
+  z-index: 11;
+}
+
+.carousel-caption a:hover {
+  text-decoration: underline;
+}
+
+.about-page::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("images/pexels-photo-8828681.jpeg");
+  background-size: cover;
+  background-position: center;
+  filter: blur(3px);
+  z-index: -1;
+}
+.content-about {
+  text-align: center; /* Center the text */
+  font-size: 24px; /* Set font size to 24px */
+  color: rgb(239, 133, 20);
+  position: relative; /* Ensure the content is above the background */
+  z-index: 1; /* Ensure the content is above the background */
+}
+
+.services-page::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("images/classrooom.jpg");
+  background-size: cover;
+  background-position: center;
+  filter: blur(3px);
+  z-index: -1;
+}
+
+.contact-page::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("images/contact.jpg");
+  background-size: cover;
+  background-position: center;
+  filter: blur(3px);
+  z-index: -1;
+}
+/* Tooltip styling */
+.tooltip {
+  position: relative;
+  text-decoration: none; /* Remove underline */
+  color: inherit; /* Inherit the color from the parent element */
+}
+
+.tooltip::after {
+  content: "Click to view our services";
+  position: absolute;
+  bottom: 100%; /* Position the tooltip above the link */
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #333;
+  color: #fff;
+  padding: 5px;
+  border-radius: 5px;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s;
+  font-size: 12px;
+}
+
+.tooltip:hover::after {
+  opacity: 1;
+  visibility: visible;
+}
+/* Footer styling */
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}
+
+footer nav a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+footer nav a:hover {
+  text-decoration: underline;
+}
+
+footer nav .current-page {
+  display: none;
+}

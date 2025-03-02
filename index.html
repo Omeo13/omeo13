@@ -1,39 +1,48 @@
 <!doctype html>
-<html lang="en-US">
+<html lang="en">
   <head>
-    <link href="style.css" rel="stylesheet" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap"
       rel="stylesheet"
     />
-
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-
-    <title>Test page</title>
   </head>
-  <body>
-    <!-- 4 heading levels: -->
-    <h1>My main title</h1>
-
-    <img src="images/firefox-icon.png" alt="My test image" />
-
-    <h2>My top level heading</h2>
-    <h3>My subheading</h3>
-    <h4>My sub-subheading</h4>
-    <p>At Mozilla, we're a global community of</p>
-
-    <ul>
-      <li>technologists</li>
-      <li>thinkers</li>
-      <li>builders</li>
-    </ul>
-
-    <p>working together…</p>
-    <a href="https://www.mozilla.org/en-US/about/manifesto/">
-      Mozilla Manifesto
-    </a>
+  <body class="home-page">
+    <div class="banner">
+      <h1>Welcome to Everyday English</h1>
+    </div>
+    <div class="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="images/about-background.jpg" alt="Image 1" />
+          <div class="carousel-caption">
+            <a href="about.html">About us</a>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="images/classrooom.jpg" alt="Image 2" />
+          <div class="carousel-caption">
+            <a href="services.html">Tutoring</a>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="images/contact.jpg" alt="Image 3" />
+          <div class="carousel-caption">
+            <a href="contact.html">Contact</a>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <p>&copy; 2025 Everyday English. All rights reserved.</p>
+      <nav>
+        <span>Home</span> | 
+        <a href="about.html">About Us</a> |
+        <a href="services.html">Services</a> |
+        <a href="contact.html">Contact</a>
+      </nav>
+    <script src="script.js"></script>
   </body>
 </html>
